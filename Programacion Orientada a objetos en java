@@ -1,0 +1,76 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package calculadora1;
+import javax.swing.JOptionPane;
+/**
+ *
+ * @author JORGE
+ */
+public class Calculadora1 {
+
+    //MIEMBROS DE CLASE O ATRIBUTOS
+	double operando1, operando2, resultado;
+	
+	//CONSTRUCTOR
+    public Calculadora1() 
+    {	operando1 =0;
+    	operando2=0;
+    	resultado=0;
+    }
+    
+    //METODOS SET
+    public void setOperando1(double valor)
+    {	operando1 = valor;
+    }
+    
+    public void setOperando2(double valor)
+    {	operando2 = valor;
+    }
+    
+    //METODOS GET
+    public double getOperando1()
+    {	return operando1;
+    }
+    
+    public double getOperando2()
+    {	return operando2;
+    }
+    
+    //public tipo_de_dato nombre_metodo
+    public double suma()
+    {	resultado = operando1 + operando2;
+    	return  resultado;
+    }
+    
+    public double resta()
+    {	resultado= operando1 - operando2;
+    	return resultado;
+    }
+    
+    public double mayor()
+    {	resultado = Math.max(operando1,operando2);
+    	return resultado;
+    }
+    
+    public double potencia( int x )
+    {	resultado = Math.pow(operando1, x);
+    	return resultado;
+    }
+    
+    public void imprimir()
+    {	String datos = "Operando 1 = " + getOperando1() + "\nOperando 2= " + getOperando2() + "\nResultado= " + resultado;
+    	JOptionPane.showMessageDialog(null,datos);
+    }
+    public static void main(String[] args) {
+        Calculadora1 Estandar;
+    	Estandar = new Calculadora1();
+    	Estandar.setOperando1(5);
+    	Estandar.setOperando2(7);
+    	Estandar.suma();
+    	Estandar.imprimir();
+    }
+    
+}
