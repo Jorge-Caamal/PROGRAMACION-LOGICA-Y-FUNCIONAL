@@ -1,0 +1,8 @@
+my_fibonacci(_, _, 0).
+
+my_fibonacci(A, B, N):-
+          write(A),
+          write(' '),
+          N1 is N-1,
+          C is A+B,
+          my_fibonacci(B, C, N1).
